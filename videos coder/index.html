@@ -14,6 +14,7 @@
         objetivo de que sea mas sencillo y eficiente su utilizacion.
     </p>
     <p><strong>Favorece su escritura, lectura y comprensión</strong></p>
+    <hr>
     <p>Ejemplo basico : <br><br>
     <Strong> i = i + 1 </Strong>es igual a <strong> i++</strong></p>
     <p>Main js - Practica*</p>
@@ -37,13 +38,137 @@
          en un archivo optimizado y más eficiente para el navegador.
     </p>
 
+    <hr>
+
     <p><strong>Transpiling</strong> : es el proceso de convertir codigo
     escrito en un lenguajue, a su representacion en otro lenguajue.</p>
     <p>*Es el proceso de convertir código moderno (por ejemplo, ES6+)
          en código más antiguo (como ES5) para asegurar la compatibilidad
           con navegadores más antiguos.
     </p>
+    <h2>2.4 - JSX📌</h2>
+    <p>Es una extension de <strong>JavaScript</strong> que nos permite escribir una especie
+        de codigo HTML, para crear los elementos de la UI.
+    </p>
+    <p>Nos permite hacer llamadas a funciones y a objetos</p>
+    <p>Al momento de ejecutar nuestra APP, Babel se encarga de convertir
+        el codigo JSX a codigo JS. Vanilla para que el navegador lo pueda
+        interpretar correctamente.
+    </p>
+    <hr>
+    <p>
+        <div className = "active">Hola coders</div>
+    </p>
+    <p><strong>Conversion : </strong></p>
+    <p>
+        React.createElement('div', {className : 'active'}, 'Hola coders')
+    </p>
+    <p>Nuestro codigo JSX⚡, va ser traducido con llamados a la function
+        de React.createElement.
+    </p>
 
+    <hr>
+    <br>
+
+    <p><strong>Reglas de sintaxis generales</strong></p>
+    <ul>
+        <li>Los elementos deben ser balanceados</li>
+        <li>Por cada abertura de etiquetas debe haber un cierre explicito</li>
+        <li>Class es una palabra reservada, se usa className</li>
+    </ul>
+
+
+    <h2>2.5 - Introduccion a Componentes📌</h2>
+    <p>Es un <strong>conjunto de elementos que cumplen una funcion
+        especifica</strong> en la UI. Cada componente puede contenet otros
+        componentes como hijos.
+    </p>
+    <br>
+    <p><strong>Diseño Modular :</strong></p>
+    <p>Los componentes⚡ nos permiten separar la UI, en piezas
+        independientes, reutilizables. La APP será un conjunto de
+        componentes trabajando en sí.
+    </p>
+    <img src="assets/diseñoModular.jpg" alt="Diseño modular">
+
+
+    <p><strong>Ventajas : </strong></p>
+    <ul>
+        <li>Separamos responsabilidades, cada componente tiene su tarea</li>
+        <li>Mas sencillo de entender</li>
+        <li>Mejora el rendimiento de la APP</li>
+        <li>Se simplifica la tarea de hacer pruebas unitarias</li>
+    </ul>
+
+    <h2>2.6 - Componentes📌</h2>
+    <p>Todos los componentes de React, se crean a partir de functions.
+        Esto hace que sea mucho mas facil de escribiy y entender el codigo.
+    </p>
+    <p>Las carasteristicas de los componentes⚡</p>
+    <ul>
+        <li>Pueden recbiri propiedades <strong>"PROPS"</strong></li>
+        <li>Tienen la capacidad de hacer <strong>Render</strong>
+            de un unico, elemento Padre, mas alla de que este elemento
+            pueda tener otras etiquetas dentro.
+        </li>
+        <li>Ademas, pueden tener <strong>estados</strong></li>
+    </ul>
+
+    <p><strong>PROPS</strong></p>
+    <p>Las props (abreviatura de "properties" o "propiedades") 
+        son un mecanismo mediante el cual los componentes en React
+        pueden recibir información de sus componentes padres.
+        En otras palabras, las props son valores que un componente
+        recibe como parámetros para que puedan ser utilizados dentro
+        de su lógica o renderizado.
+    </p>
+
+    <p><strong>Render de 1 solo Elemento/Componente</strong></p> 
+
+    <p>Esto significa que, aunque un componente pueda contener varios
+        elementos HTML dentro de él, todos esos elementos deben estar
+        envueltos dentro de un único contenedor 
+        (puede ser un div, un section, un article,
+        o incluso un fragmento de React)
+    </p>   
+
+    <h2>2.7 - Estados y Hooks📌</h2>
+    <p>Una de las principales carasteristicas de los componentes,
+        es que pueden recibir <strong>estados.</strong>
+    </p>
+    <p>Los estados son un concepto de React, no de JavaScript.</p>
+    <p>Los <strong>Hooks⚡</strong> son funciones que se pueden usar
+        dentro de los componentes funcionales para agregar funcionalidad adicional
+    </p>
+
+    <h2>2.8 - Clasificacion de Componentes📌</h2>
+    <ul>
+        <li>Contenedores</li>
+        <li>Presentacion</li>
+    </ul>
+
+    <p><strong>Componentes de Presentacion </strong> : muestran informacion, tiene muy 
+    poca logica o casi nula. Tambien se los llama : <strong>
+        stateless components.⚡
+    </strong></p>
+
+    <p>Estan orientados al aspecto visual, normalmente no tienen estados.</p>
+    <hr>
+    <p><strong>Componentes Contendedores</strong></p>
+    <p>Encapsulan a los otros componentes y les brindan las propiedades
+        que necesitan.
+    </p>
+    <p>Se encargan de modificar el estado de la APP, para que el usuario
+        pueda visualizar los cambios. Tambien son llamados <strong>
+            state componenents⚡
+        </strong>
+    </p>
+    <ul>
+        <li>Estan orientados al funcionamiento de la APP</li>
+        <li>Contienen componentes de presentacion u otros Contenedores</li>
+        <li>Se comunican con las fuentes de datos</li>
+        <li>Tienen estado para representar el cambio en los datos</li>
+    </ul>
     <script src="main.js"></script>
 </body>
 </html>

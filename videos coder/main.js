@@ -14,4 +14,3 @@ let result = null;
 
 // console.log(`This is ${condition ? "correct" : "incorrect"}`)   O.Ternario📌
 
-
