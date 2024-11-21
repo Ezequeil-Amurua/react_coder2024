@@ -1,41 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Counter from './components/Counter'
+import Card from './components/card/card'
+import travels from './data/travels'
+
+
+
 
 function App() {
-  const [count, setCount] = useState(10)
+
+  const travelsList = travels.map(t => {
+    return <Card img    = {t.img}
+                 title  = {t.title} 
+                 dates  = {t.dates}
+                 info   = {t.info}/>
+  })
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='containerCard'>
+        {travelsList}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <div className="active">Hola Coders</div>
-      <div className='active'>Chau Coders</div>
-
-      <div>
-        <ParentComponent title="Aprendiendo PROPS" />
-      </div>
-      <Counter/>
     </>
   );
 }

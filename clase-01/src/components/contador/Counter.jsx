@@ -10,7 +10,7 @@ const Counter = () => {
 
     return (
         <div>
-            <h2>{number}</h2>
+            <h2 className="contador">{number}</h2>
             <button onClick={sumar}>Sumar</button>
         </div>
     )

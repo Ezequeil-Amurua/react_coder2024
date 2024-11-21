@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.containerCard {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
